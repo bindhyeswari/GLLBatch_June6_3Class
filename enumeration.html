@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Enumeration</title>
+    <script>
+
+        // Enumeration - loop over all the properties of an object
+
+
+
+        var x = {
+            id: 32,
+            name: 'Jyotika',
+            tel: '408-356-9851'
+        };
+
+        var y = Object.create(x);
+        y.loginType = 'customer';
+
+        console.log('asdf' in x);
+
+        console.log(x);
+
+        Object.defineProperty(y, 'loginType', {
+            writable: true,
+            enumerable: false,
+            configurable: true
+        });
+
+        document.addEventListener('DOMContentLoaded', function (){
+
+            // enumeration
+
+            for (var prop in y) {
+
+                if (y.hasOwnProperty(prop)){
+                console.log(prop);
+                console.log(y[prop]);
+
+                }
+
+            }
+
+
+        });
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

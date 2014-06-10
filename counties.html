@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Dealing with county information</title>
+    <script src="data.js"></script>
+    <script>
+
+        // write code t
+        var names =counties.map(function (county_obj){
+            return county_obj.name;
+        });
+
+        counties.unshift('');
+
+        var str_names = counties.reduce(function (str, y){
+            return str + ' ' + y.name;
+        });
+
+        var obj = {
+            valueOf: function (){
+                return 5;
+            }
+
+        };
+
+        var obj2 = {
+            valueOf: function (){
+                return 10;
+            }
+        };
+        console.log(obj + obj2);
+
+        //console.log(counties);
+        //console.log(str_names.trim());
+    </script>
+</head>
+<body>
+
+</body>
+</html>

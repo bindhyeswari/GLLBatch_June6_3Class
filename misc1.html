@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        Function.prototype.sayHello = function(){
+            console.log('Hello from ' + this.name);
+        };
+
+
+        function fn1(){
+
+        }
+
+        function fn2(){
+
+        }
+        fn2.sayHello = function (){
+            console.log('I want to override the prototype');
+        };
+
+        function fn3(){
+
+        }
+
+        console.log(fn2.sayHello());
+
+        var x = {
+            p: 100,
+            q: 10,
+            add: function(){
+                return this.p + this.q;
+            }
+        };
+
+        function subtract(){
+            return y.p - y.q;
+        }
+
+        var y = {
+            p: 100,
+            q: 10
+        };
+
+
+        console.log(subtract.call(y));
+
+        var arr = new Array();
+
+        function classof(obj){
+            return Object.prototype.toString.call(obj);
+        }
+
+        console.log('The class name attribute of the date variable is: ' + classof(arr));
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
